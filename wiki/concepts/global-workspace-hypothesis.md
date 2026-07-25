@@ -117,11 +117,11 @@ as text lets the model route around the ablated J-space.
 
 ## Not yet ingested from this paper
 
-Three sections mentioned in the paper but not yet fully synthesized here —
-each is a natural next `/wiki ingest` target, especially the first given
-this project's alignment focus:
+**Alignment auditing** — now fully synthesized: [[alignment-auditing-via-jspace]].
 
-- **Alignment auditing** applications of J-space analysis — [[alignment-auditing-via-jspace]]
+Two sections still not yet fully synthesized here — natural next
+`/wiki ingest` targets:
+
 - **The Assistant's Perspective** — J-space content tracked across training/RLHF — [[assistant-perspective-jspace]]
 - **Counterfactual Reflection Training** — a training method motivated by these findings — [[counterfactual-reflection-training]]
 

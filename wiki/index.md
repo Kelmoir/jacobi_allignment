@@ -23,10 +23,10 @@ One page per ingested paper, article, transcript, etc.
 
 - [Verbalizable Representations Form a Global Workspace in Language Models](sources/verbalizable-representations-global-workspace.md) —
   Anthropic, 2026-07-06. The paper `jacobian-lens` is companion code for.
-  **Read.** Central thesis and evidence synthesized into
-  [global-workspace-hypothesis](concepts/global-workspace-hypothesis.md);
-  Alignment Auditing, Assistant's Perspective, and Counterfactual
-  Reflection Training sections still deferred (see the source page).
+  **Read.** Central thesis + alignment-auditing application both
+  synthesized (see concepts below); Assistant's Perspective and
+  Counterfactual Reflection Training sections still deferred (see the
+  source page).
 
 ## Concepts
 
@@ -37,6 +37,12 @@ Synthesis pages for ideas/topics that span multiple sources.
   processing; five functional properties (report, modulation, internal
   reasoning, generalization, selectivity) and structural layer evidence,
   from the paper above.
+- [Alignment auditing via J-space](concepts/alignment-auditing-via-jspace.md) —
+  reading J-lens at decision points surfaces silent strategic/deceptive
+  cognition: blackmail-scenario and prompt-injection case studies, two
+  implanted-misalignment model organisms, a quantitative eval-awareness
+  classifier (AUC 0.853 vs. NLA), an automated-auditing-agent benchmark,
+  and the paper's own stated limits on how far this can be trusted.
 
 ## Experiments
 

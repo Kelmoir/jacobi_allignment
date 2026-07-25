@@ -38,3 +38,34 @@ Auditing, The Assistant's Perspective, Counterfactual Reflection Training
 "~100 prompts" sample-efficiency claim (attributed to paper §9.3) wasn't
 confirmed in the fetched text — likely appendix content not captured by
 the fetch.
+
+## [2026-07-25] ingest | Alignment Auditing section (same paper, focused pass)
+
+WebFetch's summarizer was truncating before reaching this section twice in
+a row, so downloaded the raw HTML directly (curl) and stripped tags with a
+local script to read the actual paragraph text. Filed new
+[concepts/alignment-auditing-via-jspace.md](concepts/alignment-auditing-via-jspace.md):
+three production-model case studies (blackmail scenario with a causal
+ablation experiment — verbalized eval-awareness 71%→3%, blackmail attempts
+0/180→13/180; prompt injection; four Opus 4.6 audit examples), two
+implanted-misalignment model organisms (reward-hacking, reward-model-bias-
+appeasing — the latter a case where J-lens succeeds and plain logit lens
+doesn't), a quantitative eval-awareness classifier (AUC 0.853 vs. an NLA
+baseline over ~94k positions, three replicated validation experiments),
+and an automated-auditing-agent benchmark (18 claims, J-lens-equipped
+investigator comparable to NLA on 4/6 cases, notably worse on 2 — both
+traceable to the single-token-vocabulary limitation). Also captured the
+paper's own explicit limitations on this application (not sufficient for
+alignment monitoring; automatic/well-practiced misaligned behavior could
+evade it; single-token vocabulary gap) — filed prominently rather than
+buried, since this bears directly on this project's use of the tool.
+
+Updated cross-references: [sources/verbalizable-representations-global-workspace.md](sources/verbalizable-representations-global-workspace.md)
+(Alignment Auditing moved from deferred to filed), [concepts/global-workspace-hypothesis.md](concepts/global-workspace-hypothesis.md)
+and [entities/jacobian-lens-tool.md](entities/jacobian-lens-tool.md) (both
+now point to the new page instead of flagging it as an open question).
+
+Still deferred: The Assistant's Perspective, Counterfactual Reflection
+Training. Raw extracted text for both is cached at
+`/tmp/claude-1000/.../scratchpad/auditing_p1.txt` and `auditing_p2.txt`
+(session-scoped scratchpad — regenerate from the paper URL if gone).

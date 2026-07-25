@@ -44,18 +44,31 @@ Fully synthesized into [[global-workspace-hypothesis]]: the central thesis,
 the five functional properties and their experiments, the layer-structure/
 ignition findings, and the stated limitations.
 
-**Deferred** (mentioned in the paper, not yet given a full page — flagged
-for a future ingest pass focused specifically on these sections):
+Fully synthesized into [[alignment-auditing-via-jspace]]: the production-
+model case studies (blackmail scenario, prompt injection, four Opus 4.6
+audit examples), the two implanted-misalignment model organisms, the
+quantitative eval-awareness classifier (AUC 0.853 vs. NLA), the automated
+auditing agent benchmark, and the paper's own stated limitations on this
+application.
 
-- **Alignment Auditing** — the paper applies J-space analysis to safety/
-  model-auditing use cases. Directly relevant to this project's purpose;
-  worth a dedicated pass rather than a rushed summary. → [[alignment-auditing-via-jspace]]
-  (not yet written)
+**Deferred** (mentioned in the paper, not yet given a full page — flagged
+for a future ingest pass focused specifically on these sections; raw
+extracted text for both is already cached locally from this pass, in
+`/tmp/.../scratchpad/auditing_p1.txt` and `auditing_p2.txt` — regenerate
+via the paper URL if that scratchpad is gone by the time this is picked
+up):
+
 - **The Assistant's Perspective** — tracks how J-space content changes
-  across training/RLHF. → [[assistant-perspective-jspace]] (not yet written)
+  across training/RLHF (base vs. post-trained model comparisons: user-turn
+  reaction concepts, roleplay/character-drift self-monitoring, preference-
+  violation signatures, thought-suppression metacognition). →
+  [[assistant-perspective-jspace]] (not yet written)
 - **Counterfactual Reflection Training** — a training method motivated by
-  the workspace findings. → [[counterfactual-reflection-training]] (not yet
-  written)
+  the workspace findings; implants ethics-reflection concepts into the
+  J-space via counterfactual fine-tuning, shown to causally reduce
+  dishonesty on two benchmarks. → [[counterfactual-reflection-training]]
+  (not yet written; briefly pointed to from
+  [[alignment-auditing-via-jspace]]'s "Related" section)
 
 ## Open questions from this ingest
 

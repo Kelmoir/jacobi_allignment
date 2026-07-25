@@ -72,11 +72,15 @@ model need a freshly fit lens (or a shared one loaded via
 
 - We have not yet fit or applied a lens ourselves in this project — no
   experiments logged yet (see [experiments/](../experiments/README.md)).
-- The paper's Alignment Auditing application of J-space (directly relevant
-  to this project) is noted but not yet fully ingested — see the "deferred"
-  list on [[verbalizable-representations-global-workspace]].
 - The ~100-prompt sample-efficiency claim (README, attributed to paper
   §9.3) hasn't been directly confirmed against the paper text.
+
+## Alignment application
+
+The paper's primary use of this tool for safety/model-auditing purposes —
+case studies, model organisms, a quantitative eval-awareness classifier,
+and an automated-auditing-agent benchmark — is synthesized in
+[[alignment-auditing-via-jspace]].
 
 ## References
 
