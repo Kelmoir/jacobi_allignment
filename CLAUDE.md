@@ -31,6 +31,7 @@ for tracking experiments run in this project.
   [`raw/README.md`](raw/README.md).
 - `README.md` — project overview and setup (submodule clone instructions).
 - `LICENSE` — Apache License 2.0.
+- `pyproject.toml` / `.venv/` — the sandbox. See "Sandbox" below.
 
 ## The wiki
 
@@ -97,6 +98,26 @@ cd .. && git add jacobian-lens && git commit -m "Update jacobian-lens submodule"
 The outer repo pins `jacobian-lens` to a specific commit (recorded as a
 gitlink in the index, tracked via `.gitmodules`) — bumping it is a deliberate
 action, not automatic.
+
+## Sandbox
+
+Managed with `uv`, system Python (3.13.5 via `/home/kelmoir/miniconda3/bin/python3`,
+satisfies `jlens`'s `>=3.10` requirement). Root `pyproject.toml` declares
+`jlens` as an editable path dependency on `jacobian-lens/`, plus
+`jupyter`/`ipykernel` for notebook work; `dev` extra adds `pytest`, `ruff`,
+`datasets` (mirrors `jacobian-lens`'s own dev extra).
+
+```bash
+uv sync --extra dev      # create/update .venv from pyproject.toml
+uv run python ...        # run a script in the sandbox
+uv run pytest jacobian-lens/tests  # run jlens's test suite
+uv run jupyter lab        # open the walkthrough notebook, or new ones
+```
+
+`torch` resolves to a CUDA build (`2.13.0+cu130`); a GPU is present and
+`torch.cuda.is_available()` is `True` in this environment. `.venv/` is
+gitignored — rerun `uv sync --extra dev` after a fresh clone, or whenever
+`jacobian-lens` is bumped to a commit with different dependencies.
 
 ## Conventions
 

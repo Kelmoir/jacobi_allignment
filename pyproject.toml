@@ -1,0 +1,19 @@
+[project]
+name = "jacobi-alignment"
+version = "0.1.0"
+description = "Alignment research workspace: Jacobian lens experiments and LLM wiki tooling"
+requires-python = ">=3.10"
+dependencies = [
+    "jlens",
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "datasets"]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+jlens = { path = "jacobian-lens", editable = true }

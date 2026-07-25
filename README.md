@@ -37,6 +37,14 @@ Or, if already cloned:
 git submodule update --init --recursive
 ```
 
+Set up the sandbox (uses system Python, managed with `uv`; installs `jlens`
+editable from the submodule plus Jupyter):
+
+```bash
+uv sync --extra dev
+uv run jupyter lab   # e.g. to open jacobian-lens/walkthrough.ipynb
+```
+
 To work on `jacobian-lens` itself, see its
 [README](jacobian-lens/README.md) and `pyproject.toml` (Python >= 3.10, `uv`
 for dependency management).
