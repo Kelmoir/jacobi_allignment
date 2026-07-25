@@ -81,6 +81,12 @@ stub for its companion paper ([[verbalizable-representations-global-workspace]])
 both derived only from `jacobian-lens/README.md` so far — the paper itself
 is still unread. No experiments logged yet.
 
+**Interface**: `/wiki [ingest|query|lint] [details...]` (`.claude/commands/wiki.md`)
+is the entry point for all three operations above — it re-derives the
+detailed steps so they don't need to be duplicated here. Prefer invoking it
+over improvising when the user asks to ingest something, query the wiki, or
+lint it.
+
 ## Working with the submodule
 
 ```bash
