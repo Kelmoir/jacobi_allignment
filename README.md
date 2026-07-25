@@ -14,12 +14,14 @@ paired with a self-maintaining LLM wiki for general knowledge work.
   average input-output Jacobian and decoding it with the model's own
   unembedding. See its own README for install/usage.
 - **`llm_wiki_instructions.md`** — the pattern doc this project's knowledge
-  base (once built) will follow: an LLM-maintained, interlinked markdown wiki
-  layered over curated raw sources, rather than query-time RAG. See that file
-  for the full idea.
-- **Wiki** (not yet created) — will hold the general-knowledge-work
-  companion wiki for this project, plus a `CLAUDE.md`-driven schema once
-  instantiated.
+  base follows: an LLM-maintained, interlinked markdown wiki layered over
+  curated raw sources, rather than query-time RAG. See that file for the
+  full idea.
+- **[`wiki/`](wiki/)** — the knowledge base itself: research on topics
+  relevant to this project and a log of experiments run here. Maintained
+  by Claude Code per the schema in [`CLAUDE.md`](CLAUDE.md); start at
+  [`wiki/index.md`](wiki/index.md).
+- **[`raw/`](raw/)** — immutable raw sources the wiki is built from.
 
 ## Setup
 
