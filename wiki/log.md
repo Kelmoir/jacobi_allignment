@@ -69,3 +69,36 @@ Still deferred: The Assistant's Perspective, Counterfactual Reflection
 Training. Raw extracted text for both is cached at
 `/tmp/claude-1000/.../scratchpad/auditing_p1.txt` and `auditing_p2.txt`
 (session-scoped scratchpad — regenerate from the paper URL if gone).
+
+## [2026-07-26] ingest | SAE founding papers + Natural Language Autoencoders
+
+User asked for the founding papers behind "NLA" and "SAE" (terms already
+present in [[alignment-auditing-via-jspace]] but not yet ingested), then
+asked to ingest them. For SAE, user chose to treat both near-simultaneous
+2023 papers as co-founding rather than picking one. Read all three in full
+(NLA via WebFetch; the two SAE papers via curl + html2text, since both
+pages were too large for WebFetch's fetcher — the Anthropic one especially,
+at 20MB of embedded base64 figure data requiring a filtering pass to get
+clean prose).
+
+Filed three new source pages: [sources/towards-monosemanticity.md](sources/towards-monosemanticity.md)
+(Bricken et al., Anthropic 2023-10-04), [sources/sparse-autoencoders-interpretable-features.md](sources/sparse-autoencoders-interpretable-features.md)
+(Cunningham et al., arXiv 2023-09-15), and [sources/natural-language-autoencoders.md](sources/natural-language-autoencoders.md)
+(Fraser-Taliente et al., Anthropic 2026-05-07 — the paper behind the
+`frasertaliente2026nla` citation already in the wiki). Filed one new
+concept page synthesizing the two SAE papers together —
+[concepts/sparse-autoencoders.md](concepts/sparse-autoencoders.md) — noting
+what's convergent (same SAE recipe, same interpretability-over-neurons
+finding, same causal-validation logic) vs. divergent (model/scale, primary
+validation task, foregrounded open problems) between them, and their shared
+debt to Sharkey et al.'s pre-2023-09 interim reports. Did not file a
+separate NLA concept page (only one source so far; would also collide on
+slug with the source page) — [[natural-language-autoencoders]] currently
+resolves to the source page only.
+
+Updated [concepts/alignment-auditing-via-jspace.md](concepts/alignment-auditing-via-jspace.md):
+replaced the "no dedicated page yet" note for NLA with a proper
+[[natural-language-autoencoders]] link, added an [[sparse-autoencoders]]
+link where the auditing benchmark's SAE baseline is mentioned, and noted
+that the automated-auditing-agent benchmark's scaffold/ground truth is
+literally reused from the NLA paper (not just cited as a comparison).

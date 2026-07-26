@@ -131,7 +131,7 @@ A simple proof-of-concept score: mean J-lens log-probability of
 `fictional` + `simulation`, minus the mean over 100 unrelated control
 nouns, averaged over the workspace layers.
 
-Compared against an independent method — **natural-language autoencoders
+Compared against an independent method — **[[natural-language-autoencoders]]
 (NLAs)** — over ~94,000 Assistant-turn-start positions in Opus 4.6
 auditing transcripts, of which the NLA pipeline flags 198 (0.2%) as
 latently eval-aware. On a stratified subset, **the J-lens score separates
@@ -151,8 +151,8 @@ Three replications of NLA-study validation experiments, all consistent:
 ## Automated auditing agent benchmark
 
 Manual J-lens reading doesn't scale; the paper tests whether an automated
-investigator agent can use J-lens output as a tool. Setup: reuses the NLA
-paper's auditing scaffold and ground truth. An Opus 4.6 investigator agent
+investigator agent can use J-lens output as a tool. Setup: reuses the
+[[natural-language-autoencoders]] paper's auditing scaffold and ground truth. An Opus 4.6 investigator agent
 gets a transcript plus claims about the model's cognition during it, can
 query a tool returning J-lens readouts (top-25 tokens, single layer L71,
 matched to the NLA paper for apples-to-apples comparison), and an LLM
@@ -163,11 +163,11 @@ a geometry problem (3), English→Russian language switching (3), reward
 hacking (3).
 
 **Result**: the J-lens-equipped investigator modestly outperforms an
-SAE-equipped one on 4/6 cases, underperforms on 1; performs comparably to
-(slightly outperforming) the NLA-equipped investigator — treated as
-roughly gold standard, since ground truth derives from NLA — on 4 of 6
-cases (evaluation awareness, poetry planning, misreported tool calls,
-answer thrashing).
+[[sparse-autoencoders|SAE]]-equipped one on 4/6 cases, underperforms on 1;
+performs comparably to (slightly outperforming) the NLA-equipped
+investigator — treated as roughly gold standard, since ground truth derives
+from NLA — on 4 of 6 cases (evaluation awareness, poetry planning,
+misreported tool calls, answer thrashing).
 
 It **underperforms** on two:
 - *Reward hacking* (4.5 vs. 10.0 for NLA): asked whether the model
@@ -224,6 +224,7 @@ already captured, a good next `/wiki ingest` target).
 
 - Source: [[verbalizable-representations-global-workspace]]
 - Method: [[jacobian-lens-tool]], [[global-workspace-hypothesis]]
-- Cited comparison method: natural-language autoencoders (NLA) — no
-  dedicated page yet, referenced here as `frasertaliente2026nla` in the
-  paper's citations.
+- Cited comparison method: [[natural-language-autoencoders]] (the
+  `frasertaliente2026nla` paper — now ingested; it's also the source of the
+  auditing benchmark's scaffold/ground truth used above)
+- Related auditing-baseline method: [[sparse-autoencoders]]

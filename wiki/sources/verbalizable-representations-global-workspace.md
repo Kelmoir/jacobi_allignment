@@ -47,7 +47,7 @@ ignition findings, and the stated limitations.
 Fully synthesized into [[alignment-auditing-via-jspace]]: the production-
 model case studies (blackmail scenario, prompt injection, four Opus 4.6
 audit examples), the two implanted-misalignment model organisms, the
-quantitative eval-awareness classifier (AUC 0.853 vs. NLA), the automated
+quantitative eval-awareness classifier (AUC 0.853 vs. [[natural-language-autoencoders]]), the automated
 auditing agent benchmark, and the paper's own stated limitations on this
 application.
 

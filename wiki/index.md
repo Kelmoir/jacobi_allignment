@@ -1,5 +1,5 @@
 ---
-updated: 2026-07-25
+updated: 2026-07-26
 ---
 
 # Wiki Index
@@ -27,6 +27,17 @@ One page per ingested paper, article, transcript, etc.
   synthesized (see concepts below); Assistant's Perspective and
   Counterfactual Reflection Training sections still deferred (see the
   source page).
+- [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](sources/towards-monosemanticity.md) —
+  Bricken et al., Anthropic, 2023-10-04. One of the two founding papers
+  applying sparse autoencoders to LM activations. **Read.**
+- [Sparse Autoencoders Find Highly Interpretable Features in Language Models](sources/sparse-autoencoders-interpretable-features.md) —
+  Cunningham et al., 2023-09-15 (arXiv:2309.08600). The other founding SAE
+  paper, posted ~3 weeks before Bricken et al., independently arrived at.
+  **Read.**
+- [Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations](sources/natural-language-autoencoders.md) —
+  Fraser-Taliente, Kantamneni, Ong, et al., Anthropic, 2026-05-07. The
+  `frasertaliente2026nla` paper, cited but not previously ingested, used as
+  the comparison baseline in [[alignment-auditing-via-jspace]]. **Read.**
 
 ## Concepts
 
@@ -43,6 +54,12 @@ Synthesis pages for ideas/topics that span multiple sources.
   implanted-misalignment model organisms, a quantitative eval-awareness
   classifier (AUC 0.853 vs. NLA), an automated-auditing-agent benchmark,
   and the paper's own stated limits on how far this can be trusted.
+- [Sparse autoencoders (for LM interpretability)](concepts/sparse-autoencoders.md) —
+  the SAE method (ReLU autoencoder, MSE + L1 loss) for decomposing LM
+  activations into monosemantic features; synthesizes the two founding
+  2023 papers (Bricken et al., Cunningham et al.), what's convergent vs.
+  divergent between them, and how SAEs relate to
+  [[natural-language-autoencoders]] and the J-lens auditing benchmark.
 
 ## Experiments
 
